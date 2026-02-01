@@ -1,11 +1,12 @@
 package main
 
 import (
-	"log/slog"
+	"context"
 	"os"
+	"prdy366/demo/views"
 )
 
 func main() {
-	slog.Info("Hi Mom!")
-	os.Exit(0)
+	view := views.Hello("mom")
+	view.Render(context.Background(), os.Stdout)
 }
