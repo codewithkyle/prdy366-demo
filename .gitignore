@@ -1,0 +1,5 @@
+.env
+internal/queries
+
+db/database.sqlite3
+db/schema.sql
