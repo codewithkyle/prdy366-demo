@@ -1,6 +1,6 @@
-.PHONY: run db templ sqlc
+.PHONY: run db templ sqlc tailwind
 
-run: db templ sqlc
+run: db templ sqlc tailwind
 	go run .
 
 db:
@@ -11,3 +11,6 @@ templ:
 
 sqlc:
 	sqlc generate
+
+tailwind:
+	tailwindcss -i tailwind.css -o css/tailwind.min.css

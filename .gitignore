@@ -1,6 +1,7 @@
 .env
 internal/queries
 views/*.go
+css/tailwind.min.css
 
 db/database.sqlite3
 db/schema.sql

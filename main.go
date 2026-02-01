@@ -15,8 +15,24 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-		w.Write([]byte("Hi mom"))
+		w.Write([]byte("OK"))
 	})
+
+	// NOTE: static files
+	mux.Handle(
+		"/css/", 
+		http.StripPrefix(
+			"/css/", 
+			http.FileServer(http.Dir("./css")),
+		),
+	)
+	mux.Handle(
+		"/js/", 
+		http.StripPrefix(
+			"/js/", 
+			http.FileServer(http.Dir("./js")),
+		),
+	)
 
 	server := &http.Server{
 		Addr: ":8080",
