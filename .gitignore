@@ -2,6 +2,7 @@
 internal/queries
 views/*.go
 css/tailwind.min.css
+node_modules
 
 db/database.sqlite3
 db/schema.sql

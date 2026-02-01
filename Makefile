@@ -13,4 +13,4 @@ sqlc:
 	sqlc generate
 
 tailwind:
-	tailwindcss -i tailwind.css -o css/tailwind.min.css
+	npx tailwindcss -i tailwind.css -o css/tailwind.min.css -m
